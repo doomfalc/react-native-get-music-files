@@ -102,7 +102,7 @@ public class RNReactNativeGetMusicFilesModule extends ReactContextBaseJavaModule
         final Map<String, Integer> enabledMetaProperties = new HashMap<>();
         for (Map.Entry<String, Integer> entry : metadataMap.entrySet()) {
             String key = entry.getKey();
-            if (options.getBoolean(key)) {
+            if (options.hasKey(key) && options.getBoolean(key)) {
                 enabledMetaProperties.put(key, entry.getValue());
             }
         }
