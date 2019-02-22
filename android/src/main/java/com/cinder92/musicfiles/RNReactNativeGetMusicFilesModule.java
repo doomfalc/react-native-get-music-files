@@ -178,7 +178,6 @@ public class RNReactNativeGetMusicFilesModule extends ReactContextBaseJavaModule
 
                                 for (Map.Entry<String, Integer> entry : properties.entrySet()) {
                                     String value = mmr.extractMetadata(entry.getValue());
-                                    System.out.println("--- " + entry.getKey() + " : " + value + " - " + entry.getValue().toString());
                                     items.putString(entry.getKey(), value);
                                 }
 
